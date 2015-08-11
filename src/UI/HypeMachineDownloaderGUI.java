@@ -30,7 +30,7 @@ public class HypeMachineDownloaderGUI {
 
     public HypeMachineDownloaderGUI() {
 
-
+        mainForm = new JPanel();
 
         //Buttons
         saveButton.addActionListener(new ActionListener() {
@@ -71,6 +71,8 @@ public class HypeMachineDownloaderGUI {
         songsJlist.setCellRenderer( new SongCellRenderer() );
 
         songsJlist.setVisible(true);
+
+        mainForm.add(songsJlist);
 
         //Just a test
         saveDirectoryField.setText( songArrayList.get(0).artist);
